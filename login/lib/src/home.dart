@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login/src/login.dart';
+import 'package:login/src/signup.dart';
 
 class WelcomePage extends StatefulWidget {
   WelcomePage({Key key, this.title}) : super(key: key);
@@ -43,6 +44,8 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget _signUpButton() {
     return InkWell(
       onTap: () {
+        Navigator.push(
+          context, MaterialPageRoute(builder: (context) => SignUpPage()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
